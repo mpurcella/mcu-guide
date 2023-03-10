@@ -73,6 +73,7 @@ module.exports = {
             120: '7.5rem',
             full: '100%',
             screen: '100vh',
+            'd-screen': '100dvh',
         },
     },
     plugins: [
