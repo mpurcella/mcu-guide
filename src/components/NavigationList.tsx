@@ -25,7 +25,7 @@ const NavigationList = ({ isNavOpen, closeNav }: NavigationListProps) => {
     return (
         <ul
             className={classNames(
-                'fixed top-64 flex h-[calc(100vh-64px)] w-full flex-col items-center justify-center gap-32 bg-black-200 navlist-transition lg:static lg:h-auto lg:w-auto lg:flex-row lg:gap-40 lg:bg-transparent lg:opacity-100',
+                'fixed top-64 flex h-[calc(100dvh-64px)] w-full flex-col items-center justify-center gap-32 bg-black-200 navlist-transition lg:static lg:h-auto lg:w-auto lg:flex-row lg:gap-40 lg:bg-transparent lg:opacity-100',
                 {
                     'left-0': isNavOpen,
                     '-left-full': !isNavOpen,
