@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import FocusLock from 'react-focus-lock';
 import HamburgerButton from '../components/HamburgerButton';
 import NavigationList from '../components/NavigationList';
 import MarvelLogo from '../images/marvel-logo.png';
@@ -27,7 +26,6 @@ const useMediaQuery = (mediaQuery: string) => {
 const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(() => false);
     const isScreenWide = useMediaQuery('(min-width: 1024px)');
-    const [focusDisabled, setFocusDisabled] = useState(true);
 
     const handleIsNavOpen = () => {
         setIsNavOpen((currentIsNavOpen) => !currentIsNavOpen);
@@ -35,10 +33,6 @@ const Header = () => {
 
     const closeNav = () => {
         setIsNavOpen(false);
-    };
-
-    const handleFocusDisabled = () => {
-        setFocusDisabled(!focusDisabled);
     };
 
     useEffect(() => {
@@ -68,26 +62,8 @@ const Header = () => {
                 >
                     <img src={MarvelLogo} alt="Marvel Logo" className="h-full w-100 md:w-120" />
                 </Link>
-                {isScreenWide ? (
-                    <NavigationList isNavOpen={isNavOpen} closeNav={closeNav} />
-                ) : (
-                    <FocusLock disabled={focusDisabled} returnFocus={true}>
-                        <HamburgerButton
-                            isNavOpen={isNavOpen}
-                            onClick={() => {
-                                handleIsNavOpen();
-                                handleFocusDisabled();
-                            }}
-                            focusDisabled={focusDisabled}
-                        />
-                        <NavigationList
-                            isNavOpen={isNavOpen}
-                            closeNav={closeNav}
-                            focusDisabled={focusDisabled}
-                            handleFocusDisabled={handleFocusDisabled}
-                        />
-                    </FocusLock>
-                )}
+                <HamburgerButton isNavOpen={isNavOpen} onClick={handleIsNavOpen} />
+                <NavigationList isNavOpen={isNavOpen} closeNav={closeNav} />
             </nav>
         </header>
     );
