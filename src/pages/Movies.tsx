@@ -54,6 +54,10 @@ const Movies = () => {
         );
     }
 
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
     if (movies === null) {
         return null;
     }

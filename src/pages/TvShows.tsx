@@ -54,6 +54,10 @@ const TvShows = () => {
         );
     }
 
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
     if (tvShows === null) {
         return null;
     }
