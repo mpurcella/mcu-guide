@@ -4,7 +4,6 @@ import MediaCardList from '../components/MediaCardList';
 import Wrapper from '../components/Wrapper';
 import ErrorScreen from '../components/ErrorScreen';
 import PageBanner from '../components/PageBanner';
-import MarvelComicStrip from '../images/comic-strip.jpeg';
 
 type TvShowsProps = {
     cover_url: string;

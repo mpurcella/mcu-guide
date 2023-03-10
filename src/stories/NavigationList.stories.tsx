@@ -20,5 +20,4 @@ export const Default = Template.bind({});
 Default.args = {
     isNavOpen: false,
     closeNav: () => undefined,
-    isScreenWide: true,
 };
