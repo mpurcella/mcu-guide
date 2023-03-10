@@ -146,7 +146,4 @@ module.exports = {
             });
         },
     ],
-    // corePlugins: {
-    //     transitionProperty: false,
-    // },
 };
