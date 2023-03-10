@@ -74,7 +74,6 @@ module.exports = {
             quarter: '25vh',
             full: '100%',
             screen: '100vh',
-            'd-screen': '100dvh',
         },
     },
     plugins: [
