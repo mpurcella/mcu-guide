@@ -9,6 +9,9 @@ module.exports = {
             maxWidth: {
                 400: '25rem',
             },
+            minHeight: {
+                'd-screen': '100dvh',
+            },
             opacity: {
                 15: '.15',
                 35: '.35',
