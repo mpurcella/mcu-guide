@@ -30,7 +30,7 @@ const MovieInfo = ({ tvShow }: TvShowInfoProps) => {
                 <img
                     src={tvShow.cover_url}
                     alt={tvShow.title}
-                    className="m-auto w-full max-w-400 object-cover object-center shadow-lg shadow-black-100/35 md:m-0"
+                    className="m-auto w-full max-w-400 object-cover object-center shadow-lg shadow-black-100/60 md:m-0"
                 />
             </div>
             <div className="flex flex-col gap-32 md:col-span-7">
