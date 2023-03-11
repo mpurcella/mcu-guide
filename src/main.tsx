@@ -18,7 +18,7 @@ const App = () => {
             <ScrollToTop />
             <SkipToContent />
             <Header />
-            <main id="main" className="min-h-[calc(100vh-64px)]">
+            <main id="main">
                 <Outlet />
             </main>
             <Footer />
