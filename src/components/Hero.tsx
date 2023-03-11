@@ -3,7 +3,7 @@ import Avengers from '../images/avengers.png';
 const Hero = () => {
     return (
         <section className="relative h-[calc(100vh-64px)]">
-            <div className="flex h-[calc(100dvh-64px)] items-center justify-center">
+            <div className="flex h-d-screen items-center justify-center">
                 <img
                     src={Avengers}
                     alt="Thor, Wolverine, Black Widow, Iron Man, Captain America, The Hulk, Spider Man, and the Human Torch in fighting stances."

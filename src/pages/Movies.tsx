@@ -64,7 +64,7 @@ const Movies = () => {
 
     return (
         <section className="bg-white">
-            <PageBanner label="Movies" text="Explore the movies that make up Marvel Cinematic Universe!" />
+            <PageBanner label="Movies" text="Explore the movies that make up the Marvel Cinematic Universe!" />
             <Wrapper width="none">
                 <MediaCardList media={movies} url="/movies/" />
             </Wrapper>
