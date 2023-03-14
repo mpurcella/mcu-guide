@@ -145,7 +145,7 @@ module.exports = {
             });
             addBase({
                 body: {
-                    '@apply font-roboto-condensed antialiased leading-none text-black-100 scrollbar-none bg-black-100 min-h-screen min-height':
+                    '@apply font-roboto-condensed antialiased leading-none text-black-100 scrollbar-none bg-black-100':
                         {},
                 },
             });

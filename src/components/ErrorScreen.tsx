@@ -7,7 +7,7 @@ type ErrorScreenProps = {
 
 const ErrorScreen = ({ tag, children }: ErrorScreenProps) => {
     return (
-        <section className="h-[calc(100vh-64px)] p-20">
+        <section className="h-[calc(100dvh-64px)] p-20">
             <div className="flex h-full items-center justify-center">
                 <div className="max-w-screen-md">
                     <ErrorText tag={tag} children={children} />
