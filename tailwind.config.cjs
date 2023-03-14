@@ -139,10 +139,13 @@ module.exports = {
                 '.text-shadow-none': {
                     'text-shadow': 'none',
                 },
+                '.min-height': {
+                    'min-height': '-webkite-fill-available',
+                },
             });
             addBase({
                 body: {
-                    '@apply font-roboto-condensed antialiased leading-none text-black-100 scrollbar-none bg-black-100':
+                    '@apply font-roboto-condensed antialiased leading-none text-black-100 scrollbar-none bg-black-100 min-h-screen min-height':
                         {},
                 },
             });
