@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import Movies from './pages/Movies';
 import Movie from './pages/Movie';
@@ -14,7 +15,7 @@ import './index.css';
 
 const App = () => {
     return (
-        <>
+        <HelmetProvider>
             <ScrollToTop />
             <SkipToContent />
             <Header />
@@ -22,7 +23,7 @@ const App = () => {
                 <Outlet />
             </main>
             <Footer />
-        </>
+        </HelmetProvider>
     );
 };
 

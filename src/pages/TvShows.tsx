@@ -4,6 +4,7 @@ import MediaCardList from '../components/MediaCardList';
 import Wrapper from '../components/Wrapper';
 import ErrorScreen from '../components/ErrorScreen';
 import PageBanner from '../components/PageBanner';
+import { Helmet } from 'react-helmet-async';
 
 type TvShowsProps = {
     cover_url: string;
@@ -63,19 +64,24 @@ const TvShows = () => {
     }
 
     return (
-        <section className="bg-white">
-            <PageBanner
-                label="Tv Shows"
-                text="Explore the television shows that make up the Marvel Cinematic Universe!"
-            />
-            <Wrapper width="wide">
-                <MediaCardList
-                    media={tvShows}
-                    className="grid grid-cols-1 gap-40 sm:grid-cols-2 sm:gap-28 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
-                    basePath="/tvshows"
+        <>
+            <Helmet>
+                <title>Marvel Cinematic Universe Guide | TV Shows</title>
+            </Helmet>
+            <section className="bg-white">
+                <PageBanner
+                    label="Tv Shows"
+                    text="Explore the television shows that make up the Marvel Cinematic Universe!"
                 />
-            </Wrapper>
-        </section>
+                <Wrapper width="wide">
+                    <MediaCardList
+                        media={tvShows}
+                        className="grid grid-cols-1 gap-40 sm:grid-cols-2 sm:gap-28 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+                        basePath="/tvshows"
+                    />
+                </Wrapper>
+            </section>
+        </>
     );
 };
 

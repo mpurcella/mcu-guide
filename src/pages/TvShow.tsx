@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import ErrorScreen from '../components/ErrorScreen';
 import TvShowInfo from '../components/TvShowInfo';
@@ -57,7 +58,15 @@ const TvShow = () => {
 
     if (error) {
         return (
-            <ErrorScreen tag="Sorry" children="...There was an issue loading the&nbsp;page. Please try&nbsp;again." />
+            <>
+                <Helmet>
+                    <title>Marvel Cinematic Universe Guide | Loading Error</title>
+                </Helmet>
+                <ErrorScreen
+                    tag="Sorry"
+                    children="...There was an issue loading the&nbsp;page. Please try&nbsp;again."
+                />
+            </>
         );
     }
 
@@ -69,7 +78,14 @@ const TvShow = () => {
         return null;
     }
 
-    return <TvShowInfo tvShow={tvShow} />;
+    return (
+        <>
+            <Helmet>
+                <title>Marvel Cinematic Universe Guide | {tvShow.title}</title>
+            </Helmet>
+            <TvShowInfo tvShow={tvShow} />
+        </>
+    );
 };
 
 export default TvShow;

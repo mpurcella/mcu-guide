@@ -4,6 +4,7 @@ import MediaCardList from '../components/MediaCardList';
 import Wrapper from '../components/Wrapper';
 import ErrorScreen from '../components/ErrorScreen';
 import PageBanner from '../components/PageBanner';
+import { Helmet } from 'react-helmet-async';
 
 type MoviesProps = {
     cover_url: string;
@@ -63,16 +64,21 @@ const Movies = () => {
     }
 
     return (
-        <section className="bg-white">
-            <PageBanner label="Movies" text="Explore the movies that make up the Marvel Cinematic Universe!" />
-            <Wrapper width="wide">
-                <MediaCardList
-                    media={movies}
-                    className="grid grid-cols-1 gap-40 sm:grid-cols-2 sm:gap-28 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
-                    basePath="/movies"
-                />
-            </Wrapper>
-        </section>
+        <>
+            <Helmet>
+                <title>Marvel Cinematic Universe Guide | Movies</title>
+            </Helmet>
+            <section className="bg-white">
+                <PageBanner label="Movies" text="Explore the movies that make up the Marvel Cinematic Universe!" />
+                <Wrapper width="wide">
+                    <MediaCardList
+                        media={movies}
+                        className="grid grid-cols-1 gap-40 sm:grid-cols-2 sm:gap-28 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+                        basePath="/movies"
+                    />
+                </Wrapper>
+            </section>
+        </>
     );
 };
 
