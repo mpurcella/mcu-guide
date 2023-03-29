@@ -14,7 +14,7 @@ import './index.css';
 
 const App = () => {
     return (
-        <div>
+        <>
             <ScrollToTop />
             <SkipToContent />
             <Header />
@@ -22,7 +22,7 @@ const App = () => {
                 <Outlet />
             </main>
             <Footer />
-        </div>
+        </>
     );
 };
 

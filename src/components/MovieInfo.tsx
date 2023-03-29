@@ -110,7 +110,7 @@ const MovieInfo = ({ movie }: MovieInfoProps) => {
                             <MediaCardList
                                 media={movie.related_movies}
                                 className="grid grid-cols-1 gap-40 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-24"
-                                basePath="/movies/"
+                                basePath="/movies"
                             />
                         </div>
                     </Wrapper>

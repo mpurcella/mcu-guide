@@ -18,7 +18,7 @@ const MediaCardList = ({ media, className, basePath }: MovieCardListProps) => {
                 return (
                     <li key={item.id}>
                         <MediaCard
-                            url={`${basePath}${item.id}`}
+                            url={`${basePath}/${item.id}`}
                             imgUrl={item.cover_url}
                             alt={item.title}
                             title={item.title}

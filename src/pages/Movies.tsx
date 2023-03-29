@@ -69,7 +69,7 @@ const Movies = () => {
                 <MediaCardList
                     media={movies}
                     className="grid grid-cols-1 gap-40 sm:grid-cols-2 sm:gap-28 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
-                    basePath="/movies/"
+                    basePath="/movies"
                 />
             </Wrapper>
         </section>
