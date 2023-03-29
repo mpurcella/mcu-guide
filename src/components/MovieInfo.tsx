@@ -1,4 +1,4 @@
-import ButtonLinkPrimary from './ButtonLinkPrimary';
+import ButtonLink from './ButtonLink';
 import { FaPlay, FaExternalLinkAlt } from 'react-icons/fa';
 import Wrapper from './Wrapper';
 import MediaCardList from './MediaCardList';
@@ -85,14 +85,14 @@ const MovieInfo = ({ movie }: MovieInfoProps) => {
                         </div>
                         <div className="flex flex-col items-center gap-20 md:col-span-12 md:flex-row md:justify-center">
                             {movie.trailer_url === null ? null : (
-                                <ButtonLinkPrimary
+                                <ButtonLink
                                     url={movie.trailer_url}
                                     className="button-link-primary"
                                     startIcon={<FaPlay />}
                                     label="Watch Trailer"
                                 />
                             )}
-                            <ButtonLinkPrimary
+                            <ButtonLink
                                 url={`https://www.imdb.com/title/${movie.imdb_id}`}
                                 className="button-link-secondary"
                                 startIcon={<FaExternalLinkAlt />}

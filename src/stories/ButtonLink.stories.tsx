@@ -1,18 +1,18 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import ButtonLinkPrimary from '../components/ButtonLink';
+import ButtonLink from '../components/ButtonLink';
 import { FaPlay, FaExternalLinkAlt } from 'react-icons/fa';
 
 export default {
-    title: 'Button Link Primary',
-    component: ButtonLinkPrimary,
+    title: 'Button Link',
+    component: ButtonLink,
     parameters: {
         backgrounds: {
             default: 'light',
         },
     },
-} as ComponentMeta<typeof ButtonLinkPrimary>;
+} as ComponentMeta<typeof ButtonLink>;
 
-const Template: ComponentStory<typeof ButtonLinkPrimary> = (args) => <ButtonLinkPrimary {...args} />;
+const Template: ComponentStory<typeof ButtonLink> = (args) => <ButtonLink {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

@@ -115,9 +115,6 @@ module.exports = {
                 '.skip-to-content-transition': {
                     transition: 'opacity .2s linear, background .2s linear, outline .2s linear',
                 },
-                '.transition-none': {
-                    transition: 'none',
-                },
                 '.scrollbar-none': {
                     scrollbarWidth: 'none',
                     '&::-webkit-scrollbar': {

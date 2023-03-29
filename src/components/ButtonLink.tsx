@@ -1,11 +1,11 @@
-type ButtonLinkPrimaryProps = {
+type ButtonLinkProps = {
     url: string;
     className: string;
     startIcon?: React.ReactNode;
     label: string;
 };
 
-const ButtonLinkPrimary = ({ url, className, startIcon, label }: ButtonLinkPrimaryProps) => {
+const ButtonLink = ({ url, className, startIcon, label }: ButtonLinkProps) => {
     return (
         <a href={url} className={className} target="_blank" rel="noopener noreferrer">
             {startIcon && <span>{startIcon}</span>}
@@ -14,4 +14,4 @@ const ButtonLinkPrimary = ({ url, className, startIcon, label }: ButtonLinkPrima
     );
 };
 
-export default ButtonLinkPrimary;
+export default ButtonLink;
