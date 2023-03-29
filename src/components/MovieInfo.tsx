@@ -34,7 +34,7 @@ const MovieInfo = ({ movie }: MovieInfoProps) => {
     });
 
     return (
-        <div className="flex flex-col bg-white">
+        <div className="flex flex-col">
             <section>
                 <Wrapper width="narrow">
                     <div className="flex flex-col gap-40 md:grid md:grid-cols-12">

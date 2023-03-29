@@ -68,7 +68,7 @@ const Movies = () => {
             <Helmet>
                 <title>Marvel Cinematic Universe Guide | Movies</title>
             </Helmet>
-            <section className="bg-white">
+            <section>
                 <PageBanner label="Movies" text="Explore the movies that make up the Marvel Cinematic Universe!" />
                 <Wrapper width="wide">
                     <MediaCardList

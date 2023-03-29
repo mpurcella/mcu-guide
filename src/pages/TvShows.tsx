@@ -68,7 +68,7 @@ const TvShows = () => {
             <Helmet>
                 <title>Marvel Cinematic Universe Guide | TV Shows</title>
             </Helmet>
-            <section className="bg-white">
+            <section>
                 <PageBanner
                     label="Tv Shows"
                     text="Explore the television shows that make up the Marvel Cinematic Universe!"
