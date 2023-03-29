@@ -68,8 +68,12 @@ const TvShows = () => {
                 label="Tv Shows"
                 text="Explore the television shows that make up the Marvel Cinematic Universe!"
             />
-            <Wrapper width="none">
-                <MediaCardList media={tvShows} url="/tvshows/" />
+            <Wrapper width="wide">
+                <MediaCardList
+                    media={tvShows}
+                    className="grid grid-cols-1 gap-40 sm:grid-cols-2 sm:gap-28 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+                    basePath="/tvshows/"
+                />
             </Wrapper>
         </section>
     );

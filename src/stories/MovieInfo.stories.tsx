@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { MemoryRouter } from 'react-router-dom';
 import MovieInfo from '../components/MovieInfo';
 
 export default {
@@ -12,9 +13,9 @@ export default {
     },
     decorators: [
         (Story) => (
-            <div className="m-auto max-w-screen-lg p-40">
+            <MemoryRouter>
                 <Story />
-            </div>
+            </MemoryRouter>
         ),
     ],
 } as ComponentMeta<typeof MovieInfo>;
@@ -38,5 +39,21 @@ Default.args = {
         release_date: '2017-05-05',
         title: 'Guardians of the Galaxy Vol. 2',
         trailer_url: 'https://players.brightcove.net/5359769168001/rkg9u15t7b_default/index.html?videoId=5790932955001',
+        related_movies: [
+            {
+                cover_url:
+                    'https://res.cloudinary.com/augustomarcelo/image/upload/v1675207727/mcuapi/gallery/Movies/guardians_of_the_galaxy/posters/1.jpg',
+                id: 10,
+                title: 'Guardians of the Galaxy',
+                release_date: '2014-08-01',
+            },
+            {
+                cover_url:
+                    'https://res.cloudinary.com/augustomarcelo/image/upload/v1676543203/mcuapi/gallery/Movies/guardians_of_the_galaxy_vol_3/posters/3.jpg',
+                id: 32,
+                title: 'Guardians of the Galaxy Vol. 3',
+                release_date: '2023-05-05',
+            },
+        ],
     },
 };

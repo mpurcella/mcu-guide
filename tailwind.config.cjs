@@ -7,7 +7,7 @@ module.exports = {
                 'roboto-condensed': ['Roboto Condensed', 'sans-serif'],
             },
             maxWidth: {
-                400: '25rem',
+                440: '27.5rem',
             },
             opacity: {
                 15: '.15',
@@ -43,20 +43,20 @@ module.exports = {
             20: ['1.25rem'],
             24: ['1.5rem'],
             28: ['1.75rem'],
-            36: ['2.25rem'],
+            32: ['2rem'],
             40: ['2.5rem'],
         },
         screens: {
             xs: '480px',
             sm: '576px',
             md: '768px',
-            '<lg': { min: '280px', max: '1023px' },
             lg: '1024px',
             xl: '1280px',
         },
         spacing: {
             0: '0rem',
             1: '.0625rem',
+            2: '.125rem',
             3: '.1875rem',
             6: '.375rem',
             8: '.5rem',
@@ -103,9 +103,6 @@ module.exports = {
                 },
             });
             addUtilities({
-                '.media-card-text-transition': {
-                    transition: 'opacity .2s linear, visibility .2s linear, color .2s linear,',
-                },
                 '.navlink-transition': {
                     transition: 'color .2s linear, border .2s linear, outline .2s linear',
                 },
@@ -114,12 +111,6 @@ module.exports = {
                 },
                 '.clip-path': {
                     'clip-path': 'polygon(15% 0, 100% 0, 100% 30%, 100% 55%, 85% 100%, 30% 100%, 0 100%, 0 45%)',
-                },
-                '.hide': {
-                    visibility: 'hidden',
-                },
-                '.show': {
-                    visibility: 'visible',
                 },
                 '.skip-to-content-transition': {
                     transition: 'opacity .2s linear, background .2s linear, outline .2s linear',
@@ -139,14 +130,10 @@ module.exports = {
                 '.text-shadow-none': {
                     'text-shadow': 'none',
                 },
-                '.min-height': {
-                    'min-height': '-webkite-fill-available',
-                },
             });
             addBase({
                 body: {
-                    '@apply font-roboto-condensed antialiased leading-none text-black-100 scrollbar-none bg-black-100':
-                        {},
+                    '@apply font-roboto-condensed antialiased leading-none text-black-100 scrollbar-none bg-white': {},
                 },
             });
         },

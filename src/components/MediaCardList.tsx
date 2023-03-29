@@ -7,17 +7,18 @@ type MovieCardListProps = {
         release_date: string;
         title: string;
     }>;
-    url: string;
+    className: string;
+    basePath: string;
 };
 
-const MediaCardList = ({ media, url }: MovieCardListProps) => {
+const MediaCardList = ({ media, className, basePath }: MovieCardListProps) => {
     return (
-        <ul className="grid grid-cols-1 gap-40 sm:grid-cols-2 sm:gap-28 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <ul className={className}>
             {media.map((item) => {
                 return (
                     <li key={item.id}>
                         <MediaCard
-                            url={`${url}${item.id}`}
+                            url={`${basePath}${item.id}`}
                             imgUrl={item.cover_url}
                             alt={item.title}
                             title={item.title}

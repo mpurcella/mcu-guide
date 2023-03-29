@@ -2,7 +2,7 @@ import Avengers from '../images/avengers.png';
 
 const Hero = () => {
     return (
-        <section className="relative h-[calc(100dvh-64px)]">
+        <section className="relative h-[calc(100dvh-64px)] bg-black-200">
             <div className="flex h-full items-center justify-center">
                 <img
                     src={Avengers}

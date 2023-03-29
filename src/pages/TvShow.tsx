@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ErrorScreen from '../components/ErrorScreen';
-import Wrapper from '../components/Wrapper';
 import TvShowInfo from '../components/TvShowInfo';
 
 type TvShowProps = {
@@ -70,13 +69,7 @@ const TvShow = () => {
         return null;
     }
 
-    return (
-        <section className="bg-white">
-            <Wrapper width="narrow">
-                <TvShowInfo tvShow={tvShow} />
-            </Wrapper>
-        </section>
-    );
+    return <TvShowInfo tvShow={tvShow} />;
 };
 
 export default TvShow;

@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ErrorScreen from '../components/ErrorScreen';
-import Wrapper from '../components/Wrapper';
 import MovieInfo from '../components/MovieInfo';
 
 type MovieProps = {
@@ -14,11 +13,11 @@ type MovieProps = {
     overview: string;
     phase: number;
     post_credit_scenes: number;
-    related_movies?: Array<{
+    related_movies: Array<{
         cover_url: string;
         id: number;
+        release_date: string;
         title: string;
-        url: string;
     }>;
     release_date: string;
     saga: string;
@@ -77,13 +76,7 @@ const Movie = () => {
         return null;
     }
 
-    return (
-        <section className="bg-white">
-            <Wrapper width="narrow">
-                <MovieInfo movie={movie} />
-            </Wrapper>
-        </section>
-    );
+    return <MovieInfo movie={movie} />;
 };
 
 export default Movie;
