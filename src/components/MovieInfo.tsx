@@ -106,7 +106,7 @@ const MovieInfo = ({ movie }: MovieInfoProps) => {
                 <section className='flex flex-col items-center before:relative before:block before:h-2 before:w-[calc(100vw-80px)] before:bg-black-300/10 before:content-[""]'>
                     <Wrapper width="wide">
                         <div className="flex flex-col gap-40">
-                            <h3 className="text-20 font-bold uppercase">Related Movies</h3>
+                            <h3 className="text-18 font-bold uppercase">Related Movies</h3>
                             <MediaCardList
                                 media={movie.related_movies}
                                 className="grid grid-cols-1 gap-40 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-24"
