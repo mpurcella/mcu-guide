@@ -1,14 +1,14 @@
 type ButtonLinkProps = {
     url: string;
     className: string;
-    startIcon?: React.ReactNode;
+    startIcon: React.ReactNode;
     label: string;
 };
 
 const ButtonLink = ({ url, className, startIcon, label }: ButtonLinkProps) => {
     return (
         <a href={url} className={className} target="_blank" rel="noopener noreferrer">
-            {startIcon && <span>{startIcon}</span>}
+            <span>{startIcon}</span>
             {label}
         </a>
     );

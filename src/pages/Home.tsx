@@ -7,7 +7,7 @@ const Home = () => {
             <Helmet>
                 <title>Marvel Cinematic Universe Guide | Home</title>
             </Helmet>
-            <Hero />;
+            <Hero />
         </>
     );
 };

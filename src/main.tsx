@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
@@ -10,13 +10,11 @@ import PageNotFound from './pages/PageNotFound';
 import Header from './containers/Header';
 import Footer from './components/Footer';
 import SkipToContent from './components/SkipToContent';
-import ScrollToTop from './components/ScrollToTop';
 import './index.css';
 
 const App = () => {
     return (
         <HelmetProvider>
-            <ScrollToTop />
             <SkipToContent />
             <Header />
             <main id="main">
@@ -37,19 +35,29 @@ const router = createBrowserRouter([
             },
             {
                 path: '/movies',
-                element: <Movies />,
-            },
-            {
-                path: '/movies/:id',
-                element: <Movie />,
+                children: [
+                    {
+                        index: true,
+                        element: <Movies />,
+                    },
+                    {
+                        path: ':id',
+                        element: <Movie />,
+                    },
+                ],
             },
             {
                 path: '/tvshows',
-                element: <TvShows />,
-            },
-            {
-                path: '/tvshows/:id',
-                element: <TvShow />,
+                children: [
+                    {
+                        index: true,
+                        element: <TvShows />,
+                    },
+                    {
+                        path: '/tvshows/:id',
+                        element: <TvShow />,
+                    },
+                ],
             },
             {
                 path: '*',
@@ -59,4 +67,4 @@ const router = createBrowserRouter([
     },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(<RouterProvider router={router} />);
+createRoot(document.getElementById('root') as HTMLElement).render(<RouterProvider router={router} />);

@@ -51,7 +51,7 @@ const Movies = () => {
 
     if (error) {
         return (
-            <ErrorScreen tag="Sorry" children="...There was an issue loading the&nbsp;page. Please try&nbsp;again." />
+            <ErrorScreen tag="Sorry">...There was an issue loading the&nbsp;page. Please try&nbsp;again.</ErrorScreen>
         );
     }
 

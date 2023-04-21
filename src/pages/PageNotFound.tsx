@@ -7,7 +7,7 @@ const PageNotFound = () => {
             <Helmet>
                 <title>Marvel Cinematic Universe Guide | 404 - Page Not Found</title>
             </Helmet>
-            <ErrorScreen tag="404" children=" - Page not Found." />
+            <ErrorScreen tag="404"> - Page not Found.</ErrorScreen>
         </>
     );
 };

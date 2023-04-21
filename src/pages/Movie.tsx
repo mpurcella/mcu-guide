@@ -61,7 +61,7 @@ const Movie = () => {
 
         // Cleanup Function
         return () => controller.abort();
-    }, []);
+    }, [id]);
 
     if (error) {
         return (
@@ -69,10 +69,9 @@ const Movie = () => {
                 <Helmet>
                     <title>Marvel Cinematic Universe Guide | Loading Error</title>
                 </Helmet>
-                <ErrorScreen
-                    tag="Sorry"
-                    children="...There was an issue loading the&nbsp;page. Please try&nbsp;again."
-                />
+                <ErrorScreen tag="Sorry">
+                    ...There was an issue loading the&nbsp;page. Please try&nbsp;again.
+                </ErrorScreen>
             </>
         );
     }
