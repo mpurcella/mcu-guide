@@ -41,8 +41,6 @@ const Header = () => {
         }
     }, [isScreenWide]);
 
-    console.log(isScreenWide);
-
     // Disable scroll when mobile navigation list is open
     useEffect(() => {
         if (isNavOpen) {

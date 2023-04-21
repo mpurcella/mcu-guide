@@ -14,19 +14,21 @@ type MovieCardListProps = {
 const MediaCardList = ({ media, className, basePath }: MovieCardListProps) => {
     return (
         <ul className={className}>
-            {media.map((item) => {
-                return (
-                    <li key={item.id}>
-                        <MediaCard
-                            url={`${basePath}/${item.id}`}
-                            imgUrl={item.cover_url}
-                            alt={item.title}
-                            title={item.title}
-                            releaseDate={item.release_date}
-                        />
-                    </li>
-                );
-            })}
+            {media
+                .sort((a, b) => parseInt(a.release_date) - parseInt(b.release_date))
+                .map((item) => {
+                    return (
+                        <li key={item.id}>
+                            <MediaCard
+                                url={`${basePath}/${item.id}`}
+                                imgUrl={item.cover_url}
+                                alt={item.title}
+                                title={item.title}
+                                releaseDate={item.release_date}
+                            />
+                        </li>
+                    );
+                })}
         </ul>
     );
 };
